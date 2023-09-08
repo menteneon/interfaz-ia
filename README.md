@@ -20,3 +20,6 @@ instalar en el terminal
    32  history  (comando) 
 
 postular a google ux con cuenta estudiante 
+explorar electron 
+prox semana sin reunion 
+22 de septiembre remoto 
