@@ -5,6 +5,9 @@ const path = require('path')
 // Import OSC module
 const OSC = require('osc-js')
 
+// Auto updater
+require('update-electron-app')()
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
