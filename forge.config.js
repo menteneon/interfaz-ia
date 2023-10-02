@@ -27,4 +27,16 @@ module.exports = {
       config: {},
     },
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'montoyamoraga',
+          name: 'interfaz-ia'
+        },
+        prerelease: true
+      }
+    }
+  ]
 };
