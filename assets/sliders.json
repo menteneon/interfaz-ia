@@ -1,0 +1,5 @@
+{"sliders":[
+    { "nombreSliders":"amarillo", "min":0 },
+    { "nombreSliders":"celeste", "min":10 },
+    { "nombreSliders":"Peter", "min":"Jones" }
+  ]}
