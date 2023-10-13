@@ -15,10 +15,16 @@
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>. -->
     <!-- REFERENCIA DE https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round -->
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p>Valor: <span id="demo"></span></p>
+ <div class="sliderHorizontal">
+     <input type="range" min="0" max="100" value="0" class="sliderh" id="sliderh"/>
+    <p>Valor: <input type="number" value="0" min="0" max="100" id="number"/></p>
     </div>
+    <!-- referencia de https://codepen.io/ATC-test/pen/myPNqW -->
+<!-- slider vertical -->
+<div class="sliderVertical">
+  <input class="sliderv" id="sliderv" orient="" type="range"  value="0" min="1" max="100"/>
+  <p>Valor: <input type="number" value="0" min="0" max="100" id="numbertwo"/></p>
+</div> 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
