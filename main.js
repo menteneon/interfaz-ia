@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const fs = require('fs')
 
 function createWindow () {
   // Create the browser window.
@@ -44,4 +45,30 @@ app.on('window-all-closed', function () {
 // var slider = document.getElementById("myRange");
 // var output = document.getElementById("demo");
 // output.innerHTML = slider.value;
+
+// intento json 20 octubre
+// referencia https://www.easydevguide.com/posts/electron_json
+
+const filePath = path.join(app.getPath('userData'), 'assets/sliders.json')
+
+function saveData(data) {
+  const text = JSON.stringify(data)
+  fs.writeFile(filePath, text, err => {
+      if (err) {
+          console.error(err)
+      }
+  })
+}
+
+function readData() {
+  fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+          console.error(err);
+          return;
+      }
+    const parsedData = JSON.parse(data);
+      // handle the json data here
+      console.log(parsedData)
+  });
+}
 

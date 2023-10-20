@@ -1,3 +1,4 @@
+
 /**
  * This file is loaded via the <script> tag in the index.html file and will
  * be executed in the renderer process for that window. No Node.js APIs are
@@ -5,6 +6,37 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
+
+// intento json 20 octubre
+// referencia https://www.easydevguide.com/posts/electron_json
+const path = require('path')
+
+
+const filePath = path.join(app.getPath('userData'), 'assets/sliders.json')
+
+function saveData(data) {
+  const text = JSON.stringify(data)
+  fs.writeFile(filePath, text, err => {
+      if (err) {
+          console.error(err)
+      }
+  })
+}
+
+function readData() {
+  fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+          console.error(err);
+          return;
+      }
+    const parsedData = JSON.parse(data);
+      // handle the json data here
+      console.log(parsedData)
+  });
+}
+
+
+
 // slider horizontal
 let sliderHorizontal = document.getElementById("sliderH");
 let number = document.getElementById("number");
@@ -58,8 +90,11 @@ buttonV.onclick = function(){
 }
 
 buttongV.onclick = function(){
-  alert("JSON pendiente jijijijijiiiii");
+  // alert("JSON pendiente jijijijijiiiii");
+  readData();
 }
+
+
 // referencia:https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random3
 buttonrV.onclick = function(){
   let random = Math.floor((Math.random() * 100) + 1);
