@@ -9,7 +9,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "",
+  "author": "disenoUDP",
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
