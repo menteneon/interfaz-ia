@@ -9,36 +9,38 @@
     <link rel="stylesheet" href ="style.css">
   </head>
   <body>
-    <h1>BIOMATERIALES</h1>
-    <div class="menuNavegacion">
-      <input type="button" class="cargarJSON" id="cargarV" value="Cargar JSON">
-      <input type="button" class="guardarJSON" id="guardarV" value="Guardar JSON">
-      <input type="button" class="valor aleatorio" id="randomV" value="aleatorio">
-    </div> 
-    <!-- REFERENCIA DE https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round -->
- <!-- boton REFERENCIA https://www.w3schools.com/html/html_form_input_types.asp -->
- <div class="sliders">
-  </div>
-    <div class="sliderHorizontal">
-    <input type="range" min="0" max="100" value="0" class="sliderH" id="sliderH"/>
-    <p>Valor: <input type="number" value="0" min="0" max="100" id="number"/></p>
-    <input type="button" class="cargar" id="cargar" value="Cargar">
-    <input type="button" class="guardar" id="guardar" value="Guardar JSON">
-    <input type="button" class="random" id="random" value="Random">
+    <div class="contenedor">
+      <div class='cajita'>
+        <h1>BIOMATERIALES <span id='appVersion'>v</span></h1>
+      </div>
+      <div class="cajita" id="menuNavegacion">
+        <button type="button" id="btn">Open a File</button>
+        File path: <strong id="filePath"></strong>
+        <input type="button" class="cargarJSON" value="Cargar JSON">
+        <input type="button" class="guardarJSON" value="Guardar JSON">
+        <input type="button" class="valor aleatorio" value="Valores aleatorios">
+      </div> 
+      <!-- REFERENCIA DE https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round -->
+   <!-- boton REFERENCIA https://www.w3schools.com/html/html_form_input_types.asp -->
+   <div class="sliders">
     </div>
-<!-- REFERENCIA de https://codepen.io/ATC-test/pen/myPNqW -->
-<!-- slider vertical -->
-<div class="sliders">
-  <input class="sliderV" id="sliderV" orient="vertical" type="range"  value="0" min="1" max="100"/>
-  <p>Valor: <input type="number" value="0" min="0" max="100" id="numbertwo"/></p>
-</div>
-<div class="colofon">
-  <p>Esta aplicación fue desarrollada por
-    Vale Montecinos, Sofía Sandoval y Aarón Montoya-Moraga,
-    usando Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    y Electron <span id="electron-version"></span>.</p>
-  <p></p>
+      <div class="sliderHorizontal">
+      <input type="range" min="0" max="100" value="0" class="sliderH" id="sliderH"/>
+      <p>Valor: <input type="number" value="0" min="0" max="100" id="number"/></p>
+      </div>
+  <!-- REFERENCIA de https://codepen.io/ATC-test/pen/myPNqW -->
+  <!-- slider vertical -->
+  <div class="sliders">
+    <input class="sliderV" id="sliderV" orient="vertical" type="range"  value="0" min="1" max="100"/>
+    <p>Valor: <input type="number" value="0" min="0" max="100" id="numbertwo"/></p>
+  </div>
+  <div class="cajita">
+    <p>Esta aplicación fue desarrollada por
+      Vale Montecinos, Sofía Sandoval y <a href="https://montoyamoraga.io">Aarón Montoya-Moraga</a>,
+      usando Node.js <span id="node-version"></span>,
+      Chromium <span id="chrome-version"></span>,
+      y Electron <span id="electron-version"></span>.</p>
+  </div>
 </div>
 
     <!-- You can also require other files to run in this process -->

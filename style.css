@@ -1,3 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  max-width: 100%;
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+p {
+  font-size: 15pt;
+  line-height: 1.5em;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: magenta;
+  background-color: #ffffff;
+}
+
+a:hover,
+a:active {
+  color: magenta;
+  border: 1px solid;
+  box-shadow: 5px 10px greenyellow;
+}
+
+input {
+  line-height: 1.5em;
+  margin: 20px;
+}
+
+div {
+  margin: 20px;
+}
+
+.contenedor {
+  max-width: 100%;
+  margin: auto;
+}
+
+.cajita {
+  border: 1px solid;
+  box-shadow: 5px 10px greenyellow;
+}
+
 .sliderHorizontal {
   width: 100%;
 }
