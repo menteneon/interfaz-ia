@@ -11,7 +11,6 @@
 // referencia https://www.easydevguide.com/posts/electron_json
 const path = require('path')
 
-
 const filePath = path.join(app.getPath('userData'), 'assets/sliders.json')
 
 function saveData(data) {
