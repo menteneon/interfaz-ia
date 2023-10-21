@@ -1,10 +1,11 @@
 
 /**
- * This file is loaded via the <script> tag in the index.html file and will
- * be executed in the renderer process for that window. No Node.js APIs are
- * available in this process because `nodeIntegration` is turned off and
- * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
- * to expose Node.js functionality from the main process.
+ * 
+ * Este archivo es cargado por la etiqueta <script> en el archivo index.html y sera
+ * corrido en el proceso renderer para esa ventana. No hay APIs de Node.js disponibles
+ * en este proceso porque `nodeIntegration` esta apagado y `contextIsolation` esta encendido.
+ * Usa la API contextBridge en `preload.js` para exponer funcionalidades de Node.js desde el
+ * proceso principal.
  */
 
 // intento json 20 octubre
