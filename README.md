@@ -17,6 +17,12 @@ Consiste en la creación de una GUI desktop para investigación aplicada de biom
 
 La conexión entre nuestra GUI y el modelo de inteligencia artificial se realizará con el protocolo OSC.
 
+## bibliografía
+
+*   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round
+*   https://www.w3schools.com/html/html_form_input_types.asp
+*   https://codepen.io/ATC-test/pen/myPNqW
+
 ## agradecimientos
 
 este proyecto es financiado como parte del fondo concursable Factoría SEED ganado por un equipo interdisciplinario en UDP.
