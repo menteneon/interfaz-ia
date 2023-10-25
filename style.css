@@ -30,7 +30,7 @@ a:active {
 
 input {
   line-height: 1.5em;
-  margin: 20px;
+  margin: 5px;
 }
 
 div {
@@ -47,11 +47,11 @@ div {
   box-shadow: 5px 10px greenyellow;
 }
 
-.sliderHorizontal {
+/* .sliderHorizontal {
   width: 100%;
-}
+} */
 
-.sliderH {
+/* .sliderH {
   -webkit-appearance: none;
   width: 100%;
   height: 15px;
@@ -61,11 +61,11 @@ div {
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-}
+} */
 
-.sliderH:hover {
+/* .sliderH:hover {
   opacity: 1;
-}
+} */
 
 .sliderH::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -85,9 +85,7 @@ div {
   cursor: pointer;
 }
 
-.sliderVertical {
-/* slider vertical*/ 
-  .sliderV {
+/* .sliderVertical {
     -webkit-appearance: none;
     height: 200px;
     border-radius: 5px;
@@ -95,6 +93,5 @@ div {
     outline: none;
     writing-mode: bt-lr; 
     -webkit-appearance: slider-vertical; 
-    
-  }
-}
+ 
+} */
