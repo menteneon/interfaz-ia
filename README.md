@@ -22,6 +22,7 @@ La conexión entre nuestra GUI y el modelo de inteligencia artificial se realiza
 *   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round
 *   https://www.w3schools.com/html/html_form_input_types.asp
 *   https://codepen.io/ATC-test/pen/myPNqW
+*   https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random3
 
 ## agradecimientos
 

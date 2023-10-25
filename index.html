@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>biomateria</title>
@@ -16,9 +15,10 @@
       <div class="cajita" id="menuNavegacion">
         <!-- <button type="button" id="btn">Abrir archivo</button> -->
         <!-- Path <strong id="filePath"></strong> -->
-        <input type="button" class="cargarJSON" value="Cargar JSON">
-        <input type="button" class="guardarJSON" value="Guardar JSON">
-        <input type="button" class="valor aleatorio" value="Valores aleatorios">
+        <input type="button" id="botonCargarJSON" value="Cargar JSON">
+        <input type="button" id="botonGuardarJSON" value="Guardar JSON">
+        <input type="button" id="botonAleatorizarValores" value="Aleatorizar valores">
+        <input type="button" id="botonEmpujar" value="Empujar valores">
       </div> 
   
    <div class="sliders" id="divSliders"></div>
@@ -36,5 +36,6 @@
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
     <script src="./sliders.js"></script>
+    <script src="./navMenu.js"></script>
   </body>
 </html>
