@@ -6,6 +6,14 @@
  * proceso principal.
  */
 
+const spanAppVersion = document.getElementById("appVersion");
+
+window.addEventListener("load", async (event) => {
+  const version = await window.electronAPI.getAppVersion();
+  spanAppVersion.innerText = version;
+});
+
+
 // const btn = document.getElementById('btn')
 // const filePathElement = document.getElementById('filePath')
 

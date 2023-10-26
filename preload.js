@@ -9,7 +9,8 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  openFile: () => ipcRenderer.invoke('dialog:openFile')
+  openFile: () => ipcRenderer.invoke('dialog:openFile'),
+  getAppVersion: () => ipcRenderer.invoke('app:getVersion')
 });
 
 window.addEventListener('DOMContentLoaded', () => {

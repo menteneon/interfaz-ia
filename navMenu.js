@@ -13,8 +13,8 @@ let botonEmpujarValores = document.getElementById("botonEmpujarValores");
 const filePathElement = document.getElementById('filePath')
 
 botonCargarJSON.addEventListener("click", async () => {
-  const filePath = await window.electronAPI.openFile()
-  filePathElement.innerText = filePath
+  const filePath = await window.electronAPI.openFile();
+  filePathElement.innerText = filePath;
 });
 
 botonGuardarJSON.addEventListener("click", () => {

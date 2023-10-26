@@ -9,6 +9,10 @@ async function handleFileOpen () {
   }
 }
 
+async function getAppVersion() {
+  return app.getVersion();
+}
+
 function createWindow () {
   // crear la ventana principal
   const mainWindow = new BrowserWindow({
@@ -25,6 +29,8 @@ function createWindow () {
   // abrir las herramientas de desarrollo
   mainWindow.webContents.openDevTools();
 
+  // console.log(app.getVersion());
+
 }
 
 // este metodo sera llamado cuando Electron se haya inicializado
@@ -33,6 +39,8 @@ function createWindow () {
 app.whenReady().then(() => {
 
   ipcMain.handle('dialog:openFile', handleFileOpen);
+
+  ipcMain.handle('app:getVersion', getAppVersion);
 
   createWindow();
 
@@ -59,7 +67,6 @@ app.on('window-all-closed', function () {
 
 // intento json 20 octubre
 // referencia https://www.easydevguide.com/posts/electron_json
-
 
 // const filePath = path.join(app.getPath('userData'), 'assets/sliders.json')
 
