@@ -1,9 +1,18 @@
 // importar modulos
-const { app, BrowserWindow, ipcMain, dialog } = require('electron')
-const path = require('node:path')
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const path = require('node:path');
 
-async function handleFileOpen () {
-  const { canceled, filePaths } = await dialog.showOpenDialog()
+const OSC = require('osc-js');
+
+const Server = require('./oscServer.js');
+const options = require('./options.json');
+const server = new Server(options);
+
+const osc = new OSC();
+osc.open();
+
+async function handleFileOpen() {
+  const { canceled, filePaths } = await dialog.showOpenDialog();
   if (!canceled) {
     return filePaths[0];
   }
@@ -11,6 +20,12 @@ async function handleFileOpen () {
 
 async function getAppVersion() {
   return app.getVersion();
+}
+
+async function sendOSCMessage(event, address, value) {
+  console.log(event, address, value);
+  // let newMessage = new OSC.Message(address, value);
+  // return osc.send(newMessage);
 }
 
 function createWindow () {
@@ -29,8 +44,6 @@ function createWindow () {
   // abrir las herramientas de desarrollo
   mainWindow.webContents.openDevTools();
 
-  // console.log(app.getVersion());
-
 }
 
 // este metodo sera llamado cuando Electron se haya inicializado
@@ -39,10 +52,18 @@ function createWindow () {
 app.whenReady().then(() => {
 
   ipcMain.handle('dialog:openFile', handleFileOpen);
-
   ipcMain.handle('app:getVersion', getAppVersion);
+  ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);
+  // ipcMain.handle('osc:sendOSCMessage', async (event, address, value) => {
+  //   console.log(address, value);
+  // });
+
+  
 
   createWindow();
+
+  server.start();
+  server.hello();
 
   app.on('activate', function () {
     // en macOS es comun recrear una ventana en la app cuando
@@ -57,6 +78,9 @@ app.whenReady().then(() => {
 // en macOs es comun que las aplicaciones se mantengan activas
 // hasta que la persona usuaria cierre explicitamente con Cmd + Q 
 app.on('window-all-closed', function () {
+
+  server.stop();
+  
   if (process.platform !== 'darwin') {
     app.quit();
   } 

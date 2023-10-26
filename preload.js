@@ -10,7 +10,8 @@ const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('electronAPI', {
   openFile: () => ipcRenderer.invoke('dialog:openFile'),
-  getAppVersion: () => ipcRenderer.invoke('app:getVersion')
+  getAppVersion: () => ipcRenderer.invoke('app:getVersion'),
+  sendOSCMessage: () => ipcRenderer.invoke('osc:sendOSCMessage')
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -24,8 +25,4 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
-
 })
-
-
-

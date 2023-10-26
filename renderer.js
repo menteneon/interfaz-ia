@@ -8,11 +8,14 @@
 
 const spanAppVersion = document.getElementById("appVersion");
 
-window.addEventListener("load", async (event) => {
+window.addEventListener('load', async () => {
   const version = await window.electronAPI.getAppVersion();
   spanAppVersion.innerText = version;
 });
 
+window.addEventListener('click', async () => {
+  await window.electronAPI.sendOSCMessage('/test/random', Math.random());
+});
 
 // const btn = document.getElementById('btn')
 // const filePathElement = document.getElementById('filePath')
