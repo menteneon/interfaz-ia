@@ -1,10 +1,20 @@
+/////////////////////////////
+// encontrar botones segun id
+/////////////////////////////
 let botonCargarJSON = document.getElementById("botonCargarJSON");
 let botonGuardarJSON = document.getElementById("botonGuardarJSON");
 let botonAleatorizarValores = document.getElementById("botonAleatorizarValores");
 let botonEmpujarValores = document.getElementById("botonEmpujarValores");
 
+//////////////////////////
+// agregar event listeners
+//////////////////////////
 
-botonCargarJSON.addEventListener("click", () => {
+const filePathElement = document.getElementById('filePath')
+
+botonCargarJSON.addEventListener("click", async () => {
+  const filePath = await window.electronAPI.openFile()
+  filePathElement.innerText = filePath
 });
 
 botonGuardarJSON.addEventListener("click", () => {

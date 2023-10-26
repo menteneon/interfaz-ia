@@ -1,5 +1,4 @@
 /**
- * 
  * Este archivo es cargado por la etiqueta <script> en el archivo index.html y sera
  * corrido en el proceso renderer para esa ventana. No hay APIs de Node.js disponibles
  * en este proceso porque `nodeIntegration` esta apagado y `contextIsolation` esta encendido.
@@ -7,8 +6,8 @@
  * proceso principal.
  */
 
-const btn = document.getElementById('btn')
-const filePathElement = document.getElementById('filePath')
+// const btn = document.getElementById('btn')
+// const filePathElement = document.getElementById('filePath')
 
 // btn.addEventListener('click', async () => {
 //   const filePath = await window.electronAPI.openFile()
@@ -41,26 +40,3 @@ const filePathElement = document.getElementById('filePath')
 //       console.log(parsedData)
 //   });
 // }
-
-
-
-// // slider horizontal
-// let sliderHorizontal = document.getElementById("sliderH");
-// let number = document.getElementById("number");
-// let buttonH = document.getElementById("cargar");
-// let buttongH = document.getElementById("guardar");
-// let buttonrH = document.getElementById("random");
-
-
-// // cuando hay un cambio desde el slider va cambiar el valor 1,2... callback es cuando un elemento ocurre 
-// sliderHorizontal.oninput = function() {
-//   number.value = this.value;
-// }
-
-//cuando hay un cambio desde el input el slider cambiara 
-//number.oninput = function(){
-//  sliderHorizontal.value = this.value;
-//}
-
-
-

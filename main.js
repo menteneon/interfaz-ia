@@ -1,13 +1,11 @@
 // importar modulos
 const { app, BrowserWindow, ipcMain, dialog } = require('electron')
 const path = require('node:path')
-const fs = require('node:fs')
-const https = require('node:https')
 
 async function handleFileOpen () {
   const { canceled, filePaths } = await dialog.showOpenDialog()
   if (!canceled) {
-    return filePaths[0]
+    return filePaths[0];
   }
 }
 
@@ -27,15 +25,15 @@ function createWindow () {
   // abrir las herramientas de desarrollo
   mainWindow.webContents.openDevTools();
 
-  // console.log(app.getVersion());
-
 }
 
 // este metodo sera llamado cuando Electron se haya inicializado
 // y este listo para crear ventanas de navegador.
 // algunas APIs solo pueden ser usadas despues de que este evento ocurra.
 app.whenReady().then(() => {
-  ipcMain.handle('dialog:openFile', handleFileOpen)
+
+  ipcMain.handle('dialog:openFile', handleFileOpen);
+
   createWindow();
 
   app.on('activate', function () {
@@ -85,4 +83,3 @@ app.on('window-all-closed', function () {
 //       console.log(parsedData)
 //   });
 // }
-

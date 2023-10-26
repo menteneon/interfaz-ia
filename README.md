@@ -23,6 +23,7 @@ La conexión entre nuestra GUI y el modelo de inteligencia artificial se realiza
 *   https://www.w3schools.com/html/html_form_input_types.asp
 *   https://codepen.io/ATC-test/pen/myPNqW
 *   https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random3
+*   https://www.electronjs.org/docs/latest/tutorial/ipc
 
 ## agradecimientos
 
