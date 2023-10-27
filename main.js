@@ -58,8 +58,6 @@ app.whenReady().then(() => {
   //   console.log(address, value);
   // });
 
-  
-
   createWindow();
 
   server.start();

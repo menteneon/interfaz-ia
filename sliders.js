@@ -1,15 +1,37 @@
-
 // numero de sliders en la app
-const numeroSlidersTotal = 4;
+const numeroSlidersTotal = 5;
 
-const slidersValorMin = 0;
-const slidersValorMax = 100;
+const slidersValorMin = -5;
+const slidersValorMax = 5;
+
 
 // arreglo para contener los sliders
 let arregloSliders = [];
 
 // encontrar div de los sliders
 let divSliders = document.getElementById("divSliders");
+
+
+// BORRADOR DE JSON
+// arreglo vacio
+// arreglo en ingles es array
+// buscar array en javascript para entenderlo
+let valoresSliders = [];
+
+
+
+
+// FIN DE BORRADOR DE JSON
+
+
+
+
+
+
+
+
+
+
 
 // iterar para crear los sliders
 for (let i = 0; i < numeroSlidersTotal; i++) {
@@ -29,6 +51,7 @@ for (let i = 0; i < numeroSlidersTotal; i++) {
   nuevoSlider.setAttribute("min", slidersValorMin);
   nuevoSlider.setAttribute("max", slidersValorMax);
   nuevoSlider.setAttribute("step", "any");
+  // nuevoSlider.setAttribute("step", 0.0001);
 
   // configurar estilo CSS del slider
   nuevoSlider.style.appearance = "slider-vertical";
@@ -49,6 +72,9 @@ for (let i = 0; i < numeroSlidersTotal; i++) {
   nuevoSlider.value = 0;
   nuevoValor.value = nuevoSlider.value;
 
+  // agregar el valor al arreglo de valores
+  valoresSliders.push(nuevoSlider.value);
+
   // agregar el span al div de los sliders
   divSliders.appendChild(nuevoSpan);
 
@@ -59,14 +85,15 @@ for (let i = 0; i < numeroSlidersTotal; i++) {
   // agregar event listener para el slider
   nuevoSlider.addEventListener("input", function() {
     nuevoValor.value = this.value;
-    console.log(nuevoValor.style.size);
-    console.log(nuevoValor.style);
+    arregloSliders[i].value = this.value;
+    console.log(nuevoValor.value);
   });
 
   // agregar event listener para la caja de valor
   nuevoValor.addEventListener("keydown", function(event) { 
     if (event.key === "Enter") {
       nuevoSlider.value = this.value;
+      arregloSliders[i].value = this.value;
     }
   });
  

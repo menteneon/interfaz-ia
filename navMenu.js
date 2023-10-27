@@ -1,22 +1,24 @@
 /////////////////////////////
 // encontrar botones segun id
 /////////////////////////////
-let botonCargarJSON = document.getElementById("botonCargarJSON");
-let botonGuardarJSON = document.getElementById("botonGuardarJSON");
-let botonAleatorizarValores = document.getElementById("botonAleatorizarValores");
-let botonEmpujarValores = document.getElementById("botonEmpujarValores");
+
+const botonCargarJSON = document.getElementById("botonCargarJSON");
+const botonGuardarJSON = document.getElementById("botonGuardarJSON");
+const botonAleatorizarValores = document.getElementById("botonAleatorizarValores");
+const botonEmpujarValores = document.getElementById("botonEmpujarValores");
+const filePathElement = document.getElementById('filePath')
 
 //////////////////////////
 // agregar event listeners
 //////////////////////////
 
-const filePathElement = document.getElementById('filePath')
-
+// TODO: esto lo hace aaron
 botonCargarJSON.addEventListener("click", async () => {
   const filePath = await window.electronAPI.openFile();
   filePathElement.innerText = filePath;
 });
 
+// TODO: esto quiero que hagan y entiendan
 botonGuardarJSON.addEventListener("click", () => {
   for (let i = 0; i < arregloSliders.length; i++) {
     console.log(arregloSliders[i].value);
