@@ -6,7 +6,7 @@ const botonCargarJSON = document.getElementById("botonCargarJSON");
 const botonGuardarJSON = document.getElementById("botonGuardarJSON");
 const botonAleatorizarValores = document.getElementById("botonAleatorizarValores");
 const botonEmpujarValores = document.getElementById("botonEmpujarValores");
-const filePathElement = document.getElementById('filePath')
+const filePathElement = document.getElementById('filePath');
 
 //////////////////////////
 // agregar event listeners
@@ -29,6 +29,7 @@ botonAleatorizarValores.addEventListener("click", () => {
   for (let i = 0; i < arregloSliders.length; i++)  {
     let rango = arregloSliders[i].max - arregloSliders[i].min;
     arregloSliders[i].value = rango * Math.random();
+    valoresSliders[i].value = arregloSliders[i].value;
   }
 });
 
@@ -37,5 +38,6 @@ botonEmpujarValores.addEventListener("click", () => {
     // paso va entre -1 y 1
     let paso = Math.round(2 * Math.random() - 1);
     arregloSliders[i].value = paso + parseInt(arregloSliders[i].value);
+    valoresSliders[i].value = arregloSliders[i].value;
   }
 });

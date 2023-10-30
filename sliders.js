@@ -1,16 +1,14 @@
 // numero de sliders en la app
-const numeroSlidersTotal = 5;
+const numeroSlidersTotal = 30;
 
-const slidersValorMin = -5;
-const slidersValorMax = 5;
-
+const slidersValorMin = 0;
+const slidersValorMax = 127;
 
 // arreglo para contener los sliders
 let arregloSliders = [];
 
 // encontrar div de los sliders
 let divSliders = document.getElementById("divSliders");
-
 
 // BORRADOR DE JSON
 // arreglo vacio
@@ -22,13 +20,6 @@ let valoresSliders = [];
 
 
 // FIN DE BORRADOR DE JSON
-
-
-
-
-
-
-
 
 
 
@@ -73,7 +64,7 @@ for (let i = 0; i < numeroSlidersTotal; i++) {
   nuevoValor.value = nuevoSlider.value;
 
   // agregar el valor al arreglo de valores
-  valoresSliders.push(nuevoSlider.value);
+  valoresSliders.push(nuevoValor);
 
   // agregar el span al div de los sliders
   divSliders.appendChild(nuevoSpan);
