@@ -17,7 +17,7 @@ Consiste en la creación de una GUI desktop para investigación aplicada de biom
 
 La conexión entre nuestra GUI y el modelo de inteligencia artificial se realizará con el protocolo OSC.
 
-##Instrucciones para desarollo 
+## Instrucciones para desarollo 
 
 * npm run start ->para iniciar electron 
 * ctrl + c ->para cerrar electron
