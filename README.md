@@ -19,8 +19,12 @@ La conexión entre nuestra GUI y el modelo de inteligencia artificial se realiza
 
 ## Instrucciones para desarollo 
 
+* En caso de estar en un computador con sistema operativo IOS:
+  * 1) Abrir terminal
+    2) 
 * npm run start ->para iniciar electron 
 * ctrl + c ->para cerrar electron
+
 
 ## bibliografía
 
