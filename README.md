@@ -19,11 +19,13 @@ La conexión entre nuestra GUI y el modelo de inteligencia artificial se realiza
 
 ## Instrucciones para desarollo 
 
+* REQUISITO INSTALAR NODE.JS -> https://nodejs.org/en
+  
 * En caso de estar en un computador con sistema operativo IOS:
-  * 1) Abrir terminal
-    2) 
-* npm run start ->para iniciar electron 
-* ctrl + c ->para cerrar electron
+    1) Abrir terminal
+    2) Escribir comando "cd interfaz-ia/"
+    3) npm run start -> para iniciar electron
+    4) ctrl + c -> para cerrar electron
 
 
 ## bibliografía
