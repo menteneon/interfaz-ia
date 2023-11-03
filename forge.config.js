@@ -1,6 +1,7 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: __dirname + '/assets/estrella'
   },
   rebuildConfig: {},
   makers: [
@@ -10,11 +11,15 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
+      platforms: ['darwin']
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        options: {
+          icon: __dirname + '/assets/estrella'
+        }
+      },
     },
     {
       name: '@electron-forge/maker-rpm',
