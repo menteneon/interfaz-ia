@@ -17,6 +17,24 @@ Consiste en la creación de una GUI desktop para investigación aplicada de biom
 
 La conexión entre nuestra GUI y el modelo de inteligencia artificial se realizará con el protocolo OSC.
 
+## Instrucciones para desarollo 
+
+* REQUISITO INSTALAR NODE.JS -> https://nodejs.org/en
+  
+* En caso de estar en un computador con sistema operativo IOS/LINUX:
+    1) Abrir terminal
+    2) Escribir comando "cd interfaz-ia/"
+    3) npm run start -> para iniciar electron
+    4) ctrl + c -> para cerrar electron
+  
+* En caso de estar en un computador con sistema operativo WINDOWS :
+    1) Abrir Powershell
+    2) Escribir comando "ls"
+    3) Escribir comando "cd interfaz-ia/"
+    4) npm run start -> para iniciar electron
+    5) ctrl + c -> para cerrar electron
+
+
 ## bibliografía
 
 *   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round
