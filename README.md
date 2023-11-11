@@ -42,6 +42,10 @@ La conexión entre nuestra GUI y el modelo de inteligencia artificial se realiza
 *   https://codepen.io/ATC-test/pen/myPNqW
 *   https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_random3
 *   https://www.electronjs.org/docs/latest/tutorial/ipc
+*   https://www.electronforge.io/guides/create-and-add-icons#windows-and-macos
+*   https://medium.com/fantageek/changing-electron-app-icon-acf26906c5ad
+*   https://www.electronforge.io/config/makers
+  
 
 ## agradecimientos
 
