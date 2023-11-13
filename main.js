@@ -35,7 +35,9 @@ function createWindow () {
     height: 600,
     icon: __dirname + '/assets/estrella.png',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      // esto no es seguro al parecer
+      // nodeIntegration: true
     }
   })
 
