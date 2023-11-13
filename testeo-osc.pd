@@ -1,0 +1,4 @@
+#N canvas 412 -629 742 549 12;
+#X obj 183 154 print;
+#X obj 180 102 netreceive -u -b 8001;
+#X connect 1 0 0 0;
