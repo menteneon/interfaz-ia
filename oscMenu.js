@@ -1,15 +1,17 @@
 // por hacer
 
 //no funciona 
-const { ipcRenderer } =  require('electron');
+// const { ipcRenderer } =  require('electron');
 
 // Obtener el botón por su ID
 const botonConectarOSC = document.getElementById('botonConectarOSC');
 
 // Manejar el evento de clic en el botón
 botonConectarOSC.addEventListener('click', () => {
+  console.log('antes click conectar osc')
   // Enviar un mensaje al proceso principal cuando se hace clic en el botón
   ipcRenderer.send('conectar-osc');
+  console.log('despues click conectar osc')
 });
 //no funciona 
 
