@@ -21,7 +21,7 @@ botonCargarJSON.addEventListener("click", async () => {
 // TODO: esto quiero que hagan y entiendan
 botonGuardarJSON.addEventListener("click", () => {
   for (let i = 0; i < arregloSliders.length; i++) {
-    console.log(arregloSliders[i].value);
+    // console.log(arregloSliders[i].value);
   }
 });
 

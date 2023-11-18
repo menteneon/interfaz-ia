@@ -61,7 +61,7 @@ class Server {
     // process.stdout.write('\x1Bc');
 
     if (this.httpServer) {
-      console.log('server');
+      // console.log('server');
     }
   }
 }

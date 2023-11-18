@@ -77,7 +77,7 @@ for (let i = 0; i < numeroSlidersTotal; i++) {
   nuevoSlider.addEventListener("input", function() {
     nuevoValor.value = this.value;
     arregloSliders[i].value = this.value;
-    console.log(nuevoValor.value);
+    // console.log(nuevoValor.value);
   });
 
   // agregar event listener para la caja de valor
