@@ -1,7 +1,7 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: __dirname + '/assets/estrella'
+    icon: __dirname + '/assets/icono'
   },
   rebuildConfig: {},
   makers: [
@@ -17,7 +17,7 @@ module.exports = {
       name: '@electron-forge/maker-deb',
       config: {
         options: {
-          icon: __dirname + '/assets/estrella'
+          icon: __dirname + '/assets/icono'
         }
       },
     },

@@ -33,7 +33,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: __dirname + '/assets/estrella.png',
+    icon: __dirname + '/assets/icono.png',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       // esto no es seguro al parecer
