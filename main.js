@@ -20,7 +20,31 @@ async function handleFileOpen() {
 }
 
 async function handleFileSave() {
-  const { canceled, filePaths } = await dialog.showOpenDialog();
+
+  const fecha = new Date();
+  const fechaYear = fecha.getFullYear();
+  const fechaMonth = fecha.getMonth() + 1;
+  const fechaDay = fecha.getDate();
+  const fechaHour = fecha.getHours();
+  const fechaMinute = fecha.getMinutes();
+  const fechaSecond = fecha.getSeconds();
+  const fechaPath = fechaYear + '-' +
+    fechaMonth + '-' +
+    fechaDay + '-' +
+    fechaHour + '-' +
+    fechaMinute + '-'
+    + fechaSecond;
+
+  const { canceled, filePaths } = await dialog.showSaveDialog(
+    {
+      defaultPath: fechaPath +  '.json',
+      filters: [
+        { name: 'JSON', extensions: ['json'] }
+      ]
+    }
+  
+  );
+  
   if (!canceled) {
     return filePaths[0];
   }
