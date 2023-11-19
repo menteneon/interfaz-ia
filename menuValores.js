@@ -19,16 +19,8 @@ botonAleatorizarValores.addEventListener('click', () => {
 
 botonEmpujarValores.addEventListener('click', () => {
   for (let i = 0; i < arregloSliders.length; i++)  {
-    arregloSliders[i].value = ((2.0 * Math.random() - 1.0)) + arregloSliders[i].value;
+    let paso = (2.0 * Math.random() - 1.0);
+    arregloSliders[i].value = paso + Number(arregloSliders[i].value);
     valoresSliders[i].value = arregloSliders[i].value;
-
-    // paso va entre -1 y 1
-    // let paso = Math.round(2 * Math.random() - 1);
-    // arregloSliders[i].value = paso + parseInt(arregloSliders[i].value);
-    // let paso = Math.random();
-    // // arregloSliders[i].value = paso + arregloSliders[i].value;
-    // console.log(valoresSliders[i].value);
-    // arregloSliders[i].value = arregloSliders[i].value + (2 * Math.random() - 1);
-    // valoresSliders[i].value = arregloSliders[i].value;
   }
 });
