@@ -12,14 +12,14 @@ const server = new Server(options);
 const osc = new OSC();
 osc.open();
 
-async function handleFileOpen() {
+async function handleDialogFileOpen() {
   const { canceled, filePaths } = await dialog.showOpenDialog();
   if (!canceled) {
     return filePaths[0];
   }
 }
 
-async function handleDialogFileSave() {
+async function handleDialogSaveFile() {
 
   const fecha = new Date();
 
@@ -101,8 +101,8 @@ function createWindow () {
 // algunas APIs solo pueden ser usadas despues de que este evento ocurra.
 app.whenReady().then(() => {
 
-  ipcMain.handle('dialog:openFile', handleFileOpen);
-  ipcMain.handle('dialog:dialogSaveFile', handleDialogFileSave);
+  ipcMain.handle('dialog:openFile', handleDialogFileOpen);
+  ipcMain.handle('dialog:saveFile', handleDialogSaveFile);
   ipcMain.handle('json:saveFile', (event, filePath, fileContents) => {
     handleFileSave(filePath, fileContents);
   });

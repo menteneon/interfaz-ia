@@ -1,6 +1,6 @@
 {
   "name": "interfaz-ia",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "productName": "biomater.ia",
   "description": "interfaz para controlar algoritmos de proyecto biomater.ia",
   "main": "main.js",
