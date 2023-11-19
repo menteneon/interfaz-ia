@@ -2,6 +2,8 @@
 // encontrar botones segun id
 /////////////////////////////
 
+const fs = require('node:fs');
+
 const botonCargarJSON = document.getElementById('botonCargarJSON');
 const botonGuardarJSON = document.getElementById('botonGuardarJSON');
 const filePathElement = document.getElementById('filePath');
@@ -29,6 +31,7 @@ botonGuardarJSON.addEventListener('click', async () => {
 
   const direccionGrabar = await window.electronAPI.saveFile();
 
-  // aquiVoy
+  // const grabarDiscoDuro = await window.electronAPI.
+  
 
 });
