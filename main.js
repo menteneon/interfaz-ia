@@ -2,11 +2,13 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs');
+const fsPromise = require('node:fs/promises');
 
 const OSC = require('osc-js');
 
 const Server = require('./oscServer.js');
 const options = require('./options.json');
+const { type } = require('node:os');
 const server = new Server(options);
 
 const osc = new OSC();
@@ -57,16 +59,19 @@ async function handleDialogSaveFile() {
 
 async function handleFileSave(filePath, fileContents) {
   // usar fs de Node para grabar archivo
-  fs.writeFile(filePath, fileContents, err => {
-    console.log(err);
+  fs.writeFile(filePath, fileContents, (err) => {
+    console.error(err);
   });
 }
 
-async function handleFileLoad(filePath) {
-  console.log('aquiVoy');
+async function handleLoadJSON(filePath) {
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    console.error(err);
+    console.log(typeof(data));
+  });
+  return data;
 }
-
-
 
 async function getAppVersion() {
   return app.getVersion();
@@ -109,8 +114,8 @@ app.whenReady().then(() => {
   ipcMain.handle('json:saveFile', (event, filePath, fileContents) => {
     handleFileSave(filePath, fileContents);
   });
-  ipcMain.handle('json:loadFile', (event, filePath) => {
-    handleFileLoad(filePath);
+  ipcMain.handle('json:loadJSON', (event, filePath) => {
+    handleLoadJSON(filePath);
   });
   ipcMain.handle('app:getVersion', getAppVersion);
   ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);
