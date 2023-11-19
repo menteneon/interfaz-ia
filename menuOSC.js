@@ -3,7 +3,6 @@
 //no funciona 
 // const { ipcRenderer } =  require('electron');
 
-
 // Obtener el botón por su ID
 const botonConectarOSC = document.getElementById('botonConectarOSC');
 
@@ -28,18 +27,18 @@ let puertoEnvio = 8001;
 
 
 //Esto si funciona
-const { Client } = require('osc-js');
+// const { Client } = require('osc-js');
 
-const oscClient = new Client({
-  send: {
-    host: '127.0.0.1', // Dirección IP del servidor OSC (puede ser la misma máquina si Protokol
-    // y tu aplicación están en la misma computadora)
-    port: puertoEnvio // Puerto del servidor OSC (debe coincidir con el puerto que Protokol está escuchando)
-  }
-});
+// const oscClient = new Client({
+//   send: {
+//     host: '127.0.0.1', // Dirección IP del servidor OSC (puede ser la misma máquina si Protokol
+//     // y tu aplicación están en la misma computadora)
+//     port: puertoEnvio // Puerto del servidor OSC (debe coincidir con el puerto que Protokol está escuchando)
+//   }
+// });
 
 // En algún lugar de tu código cuando quieras enviar un mensaje OSC
-oscClient.send(new OSC.Message('/ruta/osc', 123, 'hola'));
+// oscClient.send(new OSC.Message('/ruta/osc', 123, 'hola'));
 //hasta aqui :D
 
 
