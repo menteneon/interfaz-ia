@@ -10,7 +10,7 @@ const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('electronAPI', {
   openFile: () => ipcRenderer.invoke('dialog:openFile'),
-  saveFile: () => ipcRenderer.invoke('dialog:saveFile'),
+  dialogSaveFile: () => ipcRenderer.invoke('dialog:dialogSaveFile'),
   getAppVersion: () => ipcRenderer.invoke('app:getVersion'),
   sendOSCMessage: () => ipcRenderer.invoke('osc:sendOSCMessage')
 });

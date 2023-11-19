@@ -93,7 +93,7 @@ function createWindow () {
 app.whenReady().then(() => {
 
   ipcMain.handle('dialog:openFile', handleFileOpen);
-  ipcMain.handle('dialog:saveFile', handleFileSave);
+  ipcMain.handle('dialog:dialogSaveFile', handleFileSave);
   ipcMain.handle('app:getVersion', getAppVersion);
   ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);
   // ipcMain.handle('osc:sendOSCMessage', async (event, address, value) => {
