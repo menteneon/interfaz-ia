@@ -57,6 +57,9 @@ async function handleDialogFileSave() {
 }
 
 async function handleFileSave(filePath, fileContents) {
+  fs.writeFile(filePath, fileContents, err => {
+    console.log(err);
+  });
   console.log('aquiVoy')
 }
 
