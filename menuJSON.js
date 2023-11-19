@@ -16,9 +16,12 @@ botonCargarJSON.addEventListener('click', async () => {
   filePathElement.innerText = filePath;
 });
 
-// TODO: esto quiero que hagan y entiendan
 botonGuardarJSON.addEventListener('click', () => {
+  // crear objeto JavaScript en blanco
+  let objeto = {};
+  // poblar los contenidos con los valores de los sliders
   for (let i = 0; i < arregloSliders.length; i++) {
-    // console.log(arregloSliders[i].value);
+    objeto['slider' + i] = {'valor': arregloSliders[i].value};
   }
+  console.log(objeto);
 });

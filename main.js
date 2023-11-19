@@ -32,7 +32,7 @@ function createWindow () {
   // crear la ventana principal
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 800,
     icon: __dirname + '/assets/icono.png',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
