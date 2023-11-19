@@ -18,8 +18,6 @@ botonCargarJSON.addEventListener('click', async () => {
 
 botonGuardarJSON.addEventListener('click', async () => {
 
-  const bla = await window.electronAPI.saveFile();
-
   // crear objeto JavaScript en blanco
   let objeto = {};
   // poblar los contenidos con los valores de los sliders
@@ -28,4 +26,8 @@ botonGuardarJSON.addEventListener('click', async () => {
   }
   const contenidoJSON = JSON.stringify(objeto);
   console.log(contenidoJSON);
+
+  const bla = await window.electronAPI.saveFile();
+  console.log(bla);
+
 });

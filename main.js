@@ -21,13 +21,17 @@ async function handleFileOpen() {
 
 async function handleFileSave() {
 
+  console.log('aqui');
+
   const fecha = new Date();
+
   const fechaYear = fecha.getFullYear();
   const fechaMonth = fecha.getMonth() + 1;
   const fechaDay = fecha.getDate();
   const fechaHour = fecha.getHours();
   const fechaMinute = fecha.getMinutes();
   const fechaSecond = fecha.getSeconds();
+
   const fechaPath = fechaYear + '-' +
     fechaMonth + '-' +
     fechaDay + '-' +
@@ -48,6 +52,7 @@ async function handleFileSave() {
   if (!canceled) {
     return filePaths[0];
   }
+
 }
 
 async function getAppVersion() {
