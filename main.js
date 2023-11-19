@@ -21,8 +21,6 @@ async function handleFileOpen() {
 
 async function handleFileSave() {
 
-  console.log('aqui');
-
   const fecha = new Date();
 
   const fechaYear = fecha.getFullYear();
@@ -39,7 +37,7 @@ async function handleFileSave() {
     fechaMinute + '-'
     + fechaSecond;
 
-  const { canceled, filePaths } = await dialog.showSaveDialog(
+  const { canceled, filePath } = await dialog.showSaveDialog(
     {
       defaultPath: fechaPath +  '.json',
       filters: [
@@ -49,8 +47,11 @@ async function handleFileSave() {
   
   );
   
+  // si se decide grabar
+  // retornamos el path de donde queremos grabar
   if (!canceled) {
-    return filePaths[0];
+    console.log(filePath);
+    return filePath;
   }
 
 }

@@ -25,9 +25,10 @@ botonGuardarJSON.addEventListener('click', async () => {
     objeto['slider' + i] = {'valor': arregloSliders[i].value};
   }
   const contenidoJSON = JSON.stringify(objeto);
-  console.log(contenidoJSON);
+  // console.log(contenidoJSON);
 
-  const bla = await window.electronAPI.saveFile();
-  console.log(bla);
+  const direccionGrabar = await window.electronAPI.saveFile();
+
+  // aquiVoy
 
 });
