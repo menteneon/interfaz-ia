@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>biomateria</title>
-    <link rel="stylesheet" href ="./style.css">
+    <meta charset='UTF-8'>
+    <meta http-equiv='Content-Security-Policy' content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>biomater.ia</title>
+    <link rel='stylesheet' href ='./style.css'>
   </head>
 
   <body>
     <div class='contenedor'>
 
       <div class='cajita'>
-        <h1>biomateria v<span id='appVersion'></span></h1>
+        <h1>biomater.ia v<span id='appVersion'></span></h1>
       </div>
 
       <details>
-        <summary>Valores</summary>
-        <div class="cajita" id="menuNavegacion">
-          <input type="button" id="botonCargarJSON" value="Abrir JSON">
-          <input type="button" id="botonGuardarJSON" value="Grabar JSON">
-          <input type="button" id="botonAleatorizarValores" value="Aleatorizar">
-          <input type="button" id="botonEmpujarValores" value="Empujar">
-          Path: <strong id="filePath"></strong>
+        <summary>JSON</summary>
+        <div class='cajita' id='menuNavegacion'>
+          <input type='button' id='botonCargarJSON' value='Abrir JSON'>
+          <input type='button' id='botonGuardarJSON' value='Grabar JSON'>
+          Path: <strong id='filePath'></strong>
         </div>
       </details>
 
       <details>
-        <summary>Conexión OSC</summary>
-        <div class="cajita" id="menuOSC">
+        <summary>OSC</summary>
+        <div class='cajita' id='menuOSC'>
           <input type='number' id='inputPuertoEnviarOSC' value='8001'>
-          <input type="button" id="botonConectarOSC" value="Conectar OSC">
-          <input type="button" id="botonDesconectarOSC" value="Desconectar OSC">
+          <input type='button' id='botonConectarOSC' value='Conectar'>
+          <input type='button' id='botonDesconectarOSC' value='Desconectar'>
         </div>
       </details>
-  
-   <div class="sliders" id="divSliders"></div>
+
+      <details>
+        <summary>Valores</summary>
+        <div class='cajita' id='menuNavegacion'>
+          <input type='button' id='botonAleatorizarValores' value='Aleatorizar'>
+          <input type='button' id='botonEmpujarValores' value='Empujar'>
+        </div>
+      </details>
+
+   <div class='sliders' id='divSliders'></div>
 
    <details>
     <summary>Créditos</summary>
-    <div class="cajita">
-      <p>Esta aplicación fue desarrollada en <a href="https://diseno.udp.cl/">Diseño UDP</a> por
-        <a href="https://github.com/menteneon">Vale Montecinos</a>, <a href="https://github.com/ssofiasandoval">Sofía Sandoval</a> y <a href="https://montoyamoraga.io">Aarón Montoya-Moraga</a>,
-        usando <a href="https://nodejs.org">Node.js</a> <span id="node-version"></span>,
-        <a href="https://www.chromium.org">Chromium</a> <span id="chrome-version"></span>,
-        y <a href="https://www.electronjs.org/">Electron</a> <span id="electron-version"></span>,
+    <div class='cajita'>
+      <p>Esta aplicación fue desarrollada para el proyecto <a href='https://biomateria.cl'>biomater.ia</a>
+        por un equipo de <a href='https://diseno.udp.cl/'>Diseño UDP</a> por
+        <a href='https://github.com/menteneon'>Vale Montecinos</a>, <a href='https://github.com/ssofiasandoval'>Sofía Sandoval</a> y <a href='https://montoyamoraga.io'>Aarón Montoya-Moraga</a>,
+        usando <a href='https://nodejs.org'>Node.js</a> <span id='node-version'></span>,
+        <a href='https://www.chromium.org'>Chromium</a> <span id='chrome-version'></span>,
+        y <a href='https://www.electronjs.org/'>Electron</a> <span id='electron-version'></span>,
       durante el segundo semestre de 2023.</p>
     </div>
    </details>
@@ -52,9 +59,10 @@
 </div>
 
     <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-    <script src="./sliders.js"></script>
-    <script src="./navMenu.js"></script>
-    <script src="./oscMenu.js"></script>
+    <script src='./renderer.js'></script>
+    <script src='./sliders.js'></script>
+    <script src='./menuJSON.js'></script>
+    <script src='./menuValores.js'></script>
+    <script src='./menuOSC.js'></script>
   </body>
 </html>

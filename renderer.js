@@ -6,7 +6,7 @@
  * proceso principal.
  */
 
-const spanAppVersion = document.getElementById("appVersion");
+const spanAppVersion = document.getElementById('appVersion');
 
 window.addEventListener('load', async () => {
   const version = await window.electronAPI.getAppVersion();

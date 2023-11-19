@@ -23,7 +23,7 @@ async function getAppVersion() {
 }
 
 async function sendOSCMessage(event, address, value) {
-  console.log(event, address, value);
+  // console.log(event, address, value);
   // let newMessage = new OSC.Message(address, value);
   // return osc.send(newMessage);
 }
@@ -63,8 +63,8 @@ app.whenReady().then(() => {
 
   createWindow();
 
-  server.start();
-  server.hello();
+  // server.start();
+  // server.hello();
 
   app.on('activate', function () {
     // en macOS es comun recrear una ventana en la app cuando
