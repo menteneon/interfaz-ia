@@ -12,7 +12,7 @@ const filePathElement = document.getElementById('filePath');
 
 // TODO: esto lo hace aaron
 botonCargarJSON.addEventListener('click', async () => {
-  const filePath = await window.electronAPI.openFile();
+  const filePath = await window.electronAPI.dialogOpenFile();
   filePathElement.innerText = filePath;
 });
 

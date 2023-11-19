@@ -57,10 +57,10 @@ async function handleDialogSaveFile() {
 }
 
 async function handleFileSave(filePath, fileContents) {
+  // usar fs de Node para grabar archivo
   fs.writeFile(filePath, fileContents, err => {
     console.log(err);
   });
-  console.log('aquiVoy')
 }
 
 
