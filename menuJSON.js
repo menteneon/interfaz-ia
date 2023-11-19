@@ -16,12 +16,16 @@ botonCargarJSON.addEventListener('click', async () => {
   filePathElement.innerText = filePath;
 });
 
-botonGuardarJSON.addEventListener('click', () => {
+botonGuardarJSON.addEventListener('click', async () => {
+
+  const bla = await window.electronAPI.saveFile();
+
   // crear objeto JavaScript en blanco
   let objeto = {};
   // poblar los contenidos con los valores de los sliders
   for (let i = 0; i < arregloSliders.length; i++) {
     objeto['slider' + i] = {'valor': arregloSliders[i].value};
   }
-  console.log(objeto);
+  const contenidoJSON = JSON.stringify(objeto);
+  console.log(contenidoJSON);
 });

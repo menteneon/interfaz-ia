@@ -1,6 +1,7 @@
 // importar modulos
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('node:path');
+const fs = require('node:fs');
 
 const OSC = require('osc-js');
 
@@ -12,6 +13,13 @@ const osc = new OSC();
 osc.open();
 
 async function handleFileOpen() {
+  const { canceled, filePaths } = await dialog.showOpenDialog();
+  if (!canceled) {
+    return filePaths[0];
+  }
+}
+
+async function handleFileSave() {
   const { canceled, filePaths } = await dialog.showOpenDialog();
   if (!canceled) {
     return filePaths[0];
@@ -55,6 +63,7 @@ function createWindow () {
 app.whenReady().then(() => {
 
   ipcMain.handle('dialog:openFile', handleFileOpen);
+  ipcMain.handle('dialog:saveFile', handleFileSave);
   ipcMain.handle('app:getVersion', getAppVersion);
   ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);
   // ipcMain.handle('osc:sendOSCMessage', async (event, address, value) => {
