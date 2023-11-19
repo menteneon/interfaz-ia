@@ -50,7 +50,6 @@ async function handleDialogSaveFile() {
   // si se decide grabar
   // retornamos el path de donde queremos grabar
   if (!canceled) {
-    console.log(filePath);
     return filePath;
   }
 
@@ -61,6 +60,10 @@ async function handleFileSave(filePath, fileContents) {
   fs.writeFile(filePath, fileContents, err => {
     console.log(err);
   });
+}
+
+async function handleFileLoad(filePath) {
+  console.log('aquiVoy');
 }
 
 
@@ -105,6 +108,9 @@ app.whenReady().then(() => {
   ipcMain.handle('dialog:saveFile', handleDialogSaveFile);
   ipcMain.handle('json:saveFile', (event, filePath, fileContents) => {
     handleFileSave(filePath, fileContents);
+  });
+  ipcMain.handle('json:loadFile', (event, filePath) => {
+    handleFileLoad(filePath);
   });
   ipcMain.handle('app:getVersion', getAppVersion);
   ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);

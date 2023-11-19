@@ -12,8 +12,9 @@ const filePathElement = document.getElementById('filePath');
 
 // TODO: esto lo hace aaron
 botonCargarJSON.addEventListener('click', async () => {
-  const filePath = await window.electronAPI.dialogOpenFile();
-  filePathElement.innerText = filePath;
+  const direccionCargar = await window.electronAPI.dialogOpenFile();
+  filePathElement.innerText = direccionCargar;
+  await window.electronAPI.loadFile(direccionCargar); 
 });
 
 botonGuardarJSON.addEventListener('click', async () => {
@@ -31,6 +32,6 @@ botonGuardarJSON.addEventListener('click', async () => {
 
   const direccionGrabar = await window.electronAPI.dialogSaveFile();
 
-  const resultado = await window.electronAPI.saveFile(direccionGrabar, contenidoJSON);  
+  await window.electronAPI.saveFile(direccionGrabar, contenidoJSON);  
 
 });

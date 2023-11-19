@@ -12,6 +12,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
   dialogOpenFile: () => ipcRenderer.invoke('dialog:openFile'),
   dialogSaveFile: () => ipcRenderer.invoke('dialog:saveFile'),
   saveFile: (filePath, fileContents) => ipcRenderer.invoke('json:saveFile', filePath, fileContents),
+  loadFile: (filePath) => ipcRenderer.invoke('json:loadFile', filePath),
   getAppVersion: () => ipcRenderer.invoke('app:getVersion'),
   sendOSCMessage: () => ipcRenderer.invoke('osc:sendOSCMessage')
 });
