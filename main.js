@@ -19,7 +19,7 @@ async function handleFileOpen() {
   }
 }
 
-async function handleFileSave() {
+async function handleDialogFileSave() {
 
   const fecha = new Date();
 
@@ -55,6 +55,12 @@ async function handleFileSave() {
   }
 
 }
+
+async function handleFileSave(filePath, fileContents) {
+  console.log('aquiVoy')
+}
+
+
 
 async function getAppVersion() {
   return app.getVersion();
@@ -93,7 +99,10 @@ function createWindow () {
 app.whenReady().then(() => {
 
   ipcMain.handle('dialog:openFile', handleFileOpen);
-  ipcMain.handle('dialog:dialogSaveFile', handleFileSave);
+  ipcMain.handle('dialog:dialogSaveFile', handleDialogFileSave);
+  ipcMain.handle('json:saveFile', (event, filePath, fileContents) => {
+    handleFileSave(filePath, fileContents);
+  });
   ipcMain.handle('app:getVersion', getAppVersion);
   ipcMain.handle('osc:sendOSCMessage', sendOSCMessage);
   // ipcMain.handle('osc:sendOSCMessage', async (event, address, value) => {

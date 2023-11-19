@@ -29,6 +29,8 @@ botonGuardarJSON.addEventListener('click', async () => {
 
   const direccionGrabar = await window.electronAPI.dialogSaveFile();
 
+  const resultado = await window.electronAPI.saveFile(direccionGrabar, contenidoJSON);
+
   // const grabarDiscoDuro = await window.electronAPI.
   
 
