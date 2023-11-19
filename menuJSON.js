@@ -24,14 +24,13 @@ botonGuardarJSON.addEventListener('click', async () => {
   for (let i = 0; i < arregloSliders.length; i++) {
     objeto['slider' + i] = {'valor': arregloSliders[i].value};
   }
-  const contenidoJSON = JSON.stringify(objeto);
-  // console.log(contenidoJSON);
+
+  // los argumentos de stringify son:
+  // objeto a convertir a JSON, reemplazador, espaciado
+  const contenidoJSON = JSON.stringify(objeto, null, 2);
 
   const direccionGrabar = await window.electronAPI.dialogSaveFile();
 
-  const resultado = await window.electronAPI.saveFile(direccionGrabar, contenidoJSON);
-
-  // const grabarDiscoDuro = await window.electronAPI.
-  
+  const resultado = await window.electronAPI.saveFile(direccionGrabar, contenidoJSON);  
 
 });
